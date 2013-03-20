@@ -3,7 +3,7 @@ public class sudoku {
 	//methods is supposed to print the sudoku board
 	//with 27 numbers appearing in random areas and 
 	//the numbers are random ranging from 1-9
-	public void printboard(int [][]array)
+	public int[][]  printboard(int [][]array)
 	{
 		Random r=new Random();
 		int a,b,cycle=0;
@@ -11,21 +11,12 @@ public class sudoku {
 		{
 			for(b=0;b<9;b++)
 			{
-				//array[a][b]=r.nextInt(9);
-				if(cycle<27)
-				{
-					System.out.print(array[r.nextInt(9)][r.nextInt(9)]=r.nextInt(9));
-					System.out.print(" ");
-				}
-				else
-				{
-					System.out.print(array[a][b]=0);
-					System.out.print(" ");
-				}
-				cycle++;
+				System.out.print(array[a][b]=0);
+				System.out.print(" ");
 			}
 				System.out.println("\n");
 		}
+		return array;
 	
 	}
 
