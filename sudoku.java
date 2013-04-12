@@ -3,16 +3,15 @@ public class sudoku {
 	//methods is supposed to print the sudoku board
 	//with 27 numbers appearing in random areas and 
 	//the numbers are random ranging from 1-9
-	public int[][]  printboard(int [][]array)
+	public int[][]  printboard(int [][]array, int x, int y)
 	{
-		Random r=new Random();
-		int a,b,cycle=0;
-		for(a=0;a<9;a++)
-		{
-			for(b=0;b<9;b++)
-			{
-				System.out.print(array[a][b]=0);
-				System.out.print(" ");
+
+		for(int a=0; a<x; a++){
+			
+			for(int b=0; b<y; b++){
+				//Java and all it's beauty...lol!
+				array[a][b] = (int)(Math.random()*10);
+				System.out.print(array[a][b] + " ");
 			}
 				System.out.println("\n");
 		}
@@ -22,9 +21,12 @@ public class sudoku {
 
 	public static void main(String []args)
 		{
-			System.out.println("The beginning");
+			//used r to represent rows and guess what c represents...lol!
+			int r = 3,c = 3;
+			System.out.println("== Sudoku ver. 0.1 ==");
 			sudoku s=new sudoku();
-			int [][] test= new int[9][9];
-			s.printboard(test);
+			int [][] test= new int[r][c];
+			
+			s.printboard(test, r, c);
 		}
 }
